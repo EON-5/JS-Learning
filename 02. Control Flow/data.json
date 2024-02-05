@@ -1,0 +1,9 @@
+{
+  "name": "John",
+  "age": 30,
+  "hobbies": ["readign", "running"],
+  "address": {
+    "city": "NY",
+    "idk": "true"
+  }
+}
