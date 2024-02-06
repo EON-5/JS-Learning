@@ -228,6 +228,7 @@ It must be written at the end of all the other parameters
 function name(para1, para2, ...para) {
     console(para)
 }
+
 */
 
 /* DESTRUCTURING
@@ -235,4 +236,107 @@ Allows to unpack values from arrays or objects into distinct variable
 const arr = [1, 2, 3, 4]
 const [a, b] = arr => a=1, b=2;
 const [a, b, , d=0, e=0] = arr => a=1, b=2, d=4, e=0;
+
+const obj = {k1: val1, k2: val2}
+const {k1} = obj => k1=val1, le paramètre de destructuration doit être la key
+It is possible to rename a variable this way : 
+const {k1: newName} = obj
+
+rest operator can also be used this way :
+let {k1, ...rest} = obj
+
+nested destructuring : const {keyobj: {key1, key2}}
+*/
+
+/* TERCIARY CONDITION
+let name = () => condition ? true : false
+
+For in loop :
+for (let key in obj) {} allow to iterate through the keys of an object
+for (let index in arr) {}
+
+For of loop :
+for (let value in arr/obj/str/)
+*/
+
+/*ITERABLE METHODES
+forEach() methode allows to iterate through an array and execute a function for each element and returns nothing
+map() methode allows to pass every element of an array through a function and returns an other array
+filter() allows to filter the element of an array thanks to a function
+find() methode return the first element that satisfy a condition
+every() and some() return true if every or some elements satisfy a condition
+reduce((accumulator, current_value) => el + current_value, Val_ini) allows to execute a function for every elements of an array an return a single value
+*/
+
+ages = [2, 3, 4];
+
+console.log(ages.reduce((prev, current) => current * prev, 2));
+
+/* Map
+Built-in data structure that allows to store key-value pairs. It is a constructor.
+It is similar to objects except that the keys can be of any data type.
+It maintains the insertion order.
+C'est une sorte d'objet amélioré
+Provides built-in iteration methods.
+
+const map = new Map()
+
+const key1 = "string";
+const key2 = function;
+const key3 = {};
+
+map.set(key1, "value1")
+map.set(key2, "value2");
+map.set(key3, "value3");
+
+map.get(key1) donne la value de la key1
+
+map.keys() donne les keys 
+map.values() donne les values
+map.delete(key) supprime la clé de map
+map.size donne la taille
+
+on itère dans une map de la façon suivante:
+for (let [key, value] of map) {
+    console.log(`${key} ${value}`)
+}
+
+for (let key of map.keys())
+for (let value of map.values()
+
+*/
+
+/* Set
+Built-in data structure than represent a collection of unique values.
+Its an array that automatically delete duplicated values.
+It goes with quick checkers built-in methods.
+
+initial_values = [1, 2, 2, 2, 3]
+const myset = new Set(initial_values) crée un nouveau set qui contient [1, 2, 3]
+
+myset.add(value)
+myset.has(value) renvoie un booleen selon l'existence de la value dans le set
+myset.delete(value)
+myset.clear() supprime tout les éléments du set
+
+for (let item of myset) {}
+
+*/
+
+/* Symbols 
+Unique and immutable data that can't be changed or recreated.
+It avoids collinding with other property names even if they have the same string representation
+They are used as identifier for objects properties
+const mysymbol = Symbol("My custom symbol")
+
+const key = Symbol("keyName")
+
+const obj = {}
+obj[key] = "value"
+
+*/
+
+/* DOM (Document Object Model)
+When a page is loaded, the browser creates à DOM for the page.
+
 */
